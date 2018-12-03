@@ -1,0 +1,127 @@
+#project {
+   #hireMe{
+    position: fixed;
+    top: 100vh;
+  }
+
+  h2 {color: lighten($dark-accent-color, 10%);
+  line-height: normal;
+margin-bottom: -10px;}
+
+  body {
+    background-color: $main-gray
+  }
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: $main-gray;
+  }
+
+  // start of info
+  .project-info {
+    position: relative;
+    padding-top: 6vh;
+    //padding: 1em 15%;
+
+    //@media (min-width: 426px) and (max-width: 800px) {padding: 1em 5em;}
+  //  @media (max-width: 426px) {padding: 1em;}
+
+    .images {
+      padding: 2em 20%;
+      @media (max-width: 426px) {padding: 1.5em 1em;}
+    }
+    .preview-img {
+      display: block;
+      margin: 5px 0;
+      width: 100%;
+      height: auto;
+      @include prefix(transform, none !important);
+
+      &.small {
+        display: inline-block;
+        width: calc(50% - 2.5px); // 50%
+        &:first-of-type {
+          float:left;
+          margin-right: 1.25px;
+        }
+        &:last-of-type {
+          float:right;
+          margin-left: 1.25px;
+        }
+      }
+
+      &.logo {
+        width: 40%;
+        height: 40%;
+        min-width: 139px;
+        min-height: 139px;
+        margin: auto;
+      }
+    }
+
+    .summary {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content:space-between;
+      text-align: left;
+
+      background-color: white;
+
+      padding: 1em 15%;
+
+      @media (max-width: 426px) {
+        flex-direction: column;
+        padding: 1em;
+      }
+      .role {margin: 5px;
+
+      h3 {color: $dark-accent-color;}}
+    }
+
+    .main {
+      //padding: 3em 0;
+      .desc {
+        padding: 1em 15%;
+        background-color: $main-white;
+        @media (max-width: 426px) {padding: 1em;}
+
+        p {line-height: 2em;}
+      }
+    }
+
+    .thanks {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      padding: 6.5vh 5px 10vh 5px;
+      text-align: center;
+      font-variant: small-caps;
+      color: $main-black;
+
+      background-color: white;
+      span {font-weight: 700; letter-spacing: 3px;}
+
+      .share {
+        display: flex;
+        flex-flow: row wrap;
+        a {
+          margin: 15px 5px;
+          height: auto;
+          text-align: center;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          font-size: .75em;
+          @extend .body-link;
+          @media (max-width: 426px) {font-size: .6em;}
+        }
+      }
+    }
+
+  }
+}
+
+body#project {overflow-y: scroll;}

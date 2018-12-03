@@ -1,0 +1,315 @@
+.hire-me:hover {cursor: pointer;}
+#hireMe {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 100vh;
+  z-index: 1000;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $dark-accent-color;
+//  color: lighten($dark-accent-color, 12%); TEMP
+  overflow: hidden;
+  color: white !important;
+
+  strong,
+  a { // TEMP:
+    color: white !important;
+    font-weight: bold !important;
+  }
+  a {// TEMP:
+    text-decoration: underline !important;
+  }
+
+  ul { // TEMP
+    list-style-type: disc !important;
+    text-align: left !important;
+    li {
+      list-style-type: disc !important;
+    }
+  }
+
+  @include prefix(transition, (top 500ms ease));
+
+  .go-back {
+    @extend .arrow;
+    position: absolute !important;
+    left: 35px !important;
+    color: $main-white;
+    &:hover {
+      margin-left: 0 !important;
+      margin-top: -5px !important;
+      transition-property: margin-top;
+    }
+  }
+
+  .contact {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    position: absolute;
+
+    //width: calc(100vw - 20%);
+    //height: calc(100vh - 13%);
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+
+    padding: 6.5% 10%;
+    @media (max-width: 500px) {padding: 15%;}
+
+    text-align: center;
+
+    overflow-y: auto;
+
+    h1 {color: $main-white !important;}
+    .contact-wrapper {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-content:space-between;
+    }
+
+    .form-wrapper > h1 {
+        color: $main-white;
+        text-align: left;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-flow: column wrap;
+      $color: $dark-accent-color;
+
+      input,
+      textarea {
+        &::placeholder {color: lighten($color, 12%);}
+
+        font-family: "Lato", sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: $main-white;
+        margin: 15px 0;
+
+        border-bottom: 2px lighten($color, 12%)  solid;
+
+        @include prefix(transition, (all 300ms ease));
+
+        @media (min-width: 1101px) {font-size: calc(1em * 1);}
+
+        @media (min-width: 768px) and (max-width: 1100px) {font-size: calc(.88em * 1);}
+
+        @media (min-width: 589px) and (max-width: 768px) {font-size: calc(.75em * 1);}
+
+        @media (min-width: 409px) and (max-width: 589px) {font-size: calc(.7em * 1);}
+
+        @media (min-width: 367px) and (max-width: 408px) {font-size: calc(.7em * 1);}
+
+        @media (min-width: 326px) and (max-width: 367px) {font-size: calc(.65em * 1);}
+
+        @media (max-width: 326px) {font-size: calc(.6em * 1);}
+      }
+
+      input[type=submit] {
+        background-color: transparent;
+        border: none;
+        text-align: right;
+        margin: 0 0 15px 0 !important;
+        color: $main-white;
+
+        @include prefix(transition, (margin-right 300ms ease));
+        @media (min-width: 1101px) {font-size: calc(1em * 2);}
+
+        @media (min-width: 768px) and (max-width: 1100px) {font-size: calc(.88em * 2);}
+
+        @media (min-width: 589px) and (max-width: 768px) {font-size: calc(.75em * 2);}
+
+        @media (min-width: 409px) and (max-width: 589px) {font-size: calc(.7em * 2);}
+
+        @media (min-width: 367px) and (max-width: 408px) {font-size: calc(.7em * 2);}
+
+        @media (min-width: 326px) and (max-width: 367px) {font-size: calc(.65em * 2);}
+
+        @media (max-width: 326px) {font-size: calc(.6em * 2);}
+
+        &:hover {
+          margin-right: -5px;
+          cursor: pointer;
+        }
+      }
+
+      input[type=text],
+      input[type=email],
+      textarea {
+        &::placeholder {@include prefix(transition, all 500ms ease);}
+        background-color: transparent;
+        &:focus {
+          //background-color: rgba($main-white, .15) !important;
+          border-bottom-color: $main-white;
+          &::placeholder {
+            @include prefix(transform, (translateY(-2em)));
+          }
+        }
+      }
+
+      textarea {
+        resize:vertical;
+        margin-bottom: 0 !important;
+        text-transform: none;
+        font-family: "Nexa", sans-serif;
+        font-weight: 100;
+        &::placeholder {
+          text-transform: uppercase;
+          font-family: "Lato", sans-serif;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+        }
+        &:focus{ &::placeholder {
+        @include prefix(transform, (translateY(-2.5em)));}
+      }}
+    }
+
+    .links {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      .link {
+        margin: 10px 0;
+      }
+    }
+    .link {
+      @extend .body-link;
+      display: block !important;
+      color: $main-white !important;
+      border-color: $main-white !important;
+      border-width: 2px !important;
+
+      @include prefix(transition, (all 300ms ease));
+
+      font-size: calc(1em * .75);
+
+      h2{color: $main-white !important;}
+
+
+      &.special {
+        margin: 0 auto 10px auto !important;
+        padding: .5em 10px !important;
+        border: $main-white 2px solid;
+        font-size: calc(1em * .75);
+
+        &:hover {
+          color: $dark-accent-color !important;
+          background-color: $main-white;
+          h2 {color: $dark-accent-color !important;}
+
+        }
+      }
+    }
+
+    .pricing {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      width: 100%;
+
+      .price-box {
+        display: flex;
+        flex-flow:column wrap;
+        justify-content: center;
+        align-items: center;
+
+        border: none;
+        width: 300px;
+        min-height: 200px;
+        margin: 3%;
+        @include prefix(box-shadow, (0 32px 40px -20px rgba(0,0,0,.25)));
+
+        @media (max-width: 426px) {
+          width: 100%;
+          height: auto;
+          padding: 5%;
+        }
+        @media (max-width: 367px) {
+          padding: 10% 5%;
+        }
+
+        $color: $dark-accent-color;
+        background-color: lighten($color, 9%);
+        color: white !important;
+        h2,
+        .price {
+          color: white !important;
+          margin-bottom: 8px;
+          font-family: "Nexa", sans-serif;
+          font-weight: 900;
+          @media (min-width: 1101px) {font-size: calc(1em * 2);}
+
+          @media (min-width: 768px) and (max-width: 1100px) {font-size: calc(.88em * 2);}
+
+          @media (min-width: 589px) and (max-width: 768px) {font-size: calc(.88em * 2);}
+
+          @media (min-width: 409px) and (max-width: 589px) {font-size: calc(.88em * 2);}
+
+          @media (min-width: 367px) and (max-width: 408px) {font-size: calc(.7em * 2);}
+
+          @media (min-width: 326px) and (max-width: 367px) {font-size: calc(.65em * 2);}
+
+          @media (max-width: 326px) {font-size: calc(.6em * 2);}
+        }
+
+        .price {
+          letter-spacing: 3px;
+          text-transform: lowercase;
+          font-variant: small-caps;
+        }
+
+        em {
+          padding: 0 4%;
+          text-align: center;
+          @media (min-width: 1101px) {font-size: 1em;}
+
+          @media (min-width: 768px) and (max-width: 1100px) {font-size: .88em;}
+
+          @media (min-width: 589px) and (max-width: 768px) {font-size: .88em;}
+
+          @media (min-width: 409px) and (max-width: 589px) {font-size: .88em;}
+
+          @media (min-width: 367px) and (max-width: 408px) {font-size: .7em;}
+
+          @media (min-width: 326px) and (max-width: 367px) {font-size: .65em;}
+
+          @media (max-width: 326px) {font-size: .6em;}
+        }
+      }
+    }
+
+    .disclaimer {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      @media (min-width: 1101px) {font-size: calc(1em * .75);}
+
+      @media (min-width: 768px) and (max-width: 1100px) {font-size: calc(.88em * .85);}
+
+      @media (min-width: 589px) and (max-width: 768px) {font-size: calc(.88em * .85);}
+
+      @media (min-width: 409px) and (max-width: 589px) {font-size: calc(.88em * .85);}
+
+      @media (min-width: 367px) and (max-width: 408px) {font-size: calc(.7em * .85);}
+
+      @media (min-width: 326px) and (max-width: 367px) {font-size: calc(.65em * .85);}
+
+      @media (max-width: 326px) {font-size: calc(.6em * .85);}
+    }
+  }

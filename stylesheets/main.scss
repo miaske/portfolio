@@ -1,0 +1,105 @@
+// palette
+$main-black: #13070C; // smoky black
+$main-gray: #E3E5EC; // platinum
+$main-white: #F2F4F9; // white
+$main-blue: #2E385C; // blue
+$main-pink: #DBBEB9; // pink
+
+$dark-accent-color: $main-blue;
+$light-accent-color: $main-pink;
+
+$bg-color: white;
+
+$body-text-color: $main-black;
+$body-font-family: "Nexa", sans-serif;
+$body-font-weight: 100;
+
+
+$head-font-family: "Nexa", sans-serif;
+$head-font-weight: 100;
+
+// vendors
+  // vendor prefixes
+  $webkit: "-webkit-";
+  $moz: "-moz-";
+  $opera: "-o-";
+  $ms: "-ms-";
+
+// mixin for a declaration with vendor prefixes
+@mixin prefix($property, $value) {
+  @each $prefix in ("", $webkit, $moz, $opera, $ms) {
+    #{$prefix}#{$property}: #{$value};
+  }
+}
+
+html,
+body,
+#body {
+  position: relative;
+  overflow: hidden;
+  #project {overflow-y:auto;}
+}
+
+body {
+  color: $body-text-color;
+  background-color: $bg-color;
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+}
+
+.body-link {border-bottom: $main-black solid 1px;}
+
+p {text-align: justify;}
+
+h1,
+h2,
+h3,
+h4,
+[class|="text"],
+.hire-me {
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  font-variant: small-caps;
+
+  @media (min-width: 1101px) {font-size: 2em;}
+
+  @media (min-width: 768px) and (max-width: 1100px) {font-size: calc(.88em * 2);}
+
+  @media (min-width: 589px) and (max-width: 768px) {font-size: calc(.75em * 2);}
+
+  @media (min-width: 409px) and (max-width: 589px) {font-size: calc(.7em * 2);}
+
+  @media (min-width: 367px) and (max-width: 408px) {font-size: calc(.7em * 2);}
+
+  @media (min-width: 326px) and (max-width: 367px) {font-size: calc(.65em * 2);}
+
+  @media (max-width: 326px) {font-size: calc(.6em * 2);}
+}
+h3,
+h4 {color: lighten($dark-accent-color, 15%);}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $head-font-family;
+  font-weight: $head-font-weight;
+}
+
+.layer.load h2,
+.layer.title h1, .layer.title h2,
+.layer.list h3,
+.link h2,
+.skill h2, .per,
+#index > .layer *,
+#workBox h2, #skillsBox h2, #aboutBox h2,
+[class|="text"],
+.hire-me {
+  font-family: $head-font-family !important;
+  font-weight: 900 !important;
+}
+
+.layer,
+.skill {visibility: hidden;}
+
+@import "modules/all","partials/base";

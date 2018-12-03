@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+* {box-sizing: border-box;}
+
+::-webkit-scrollbar {background-color: rgba(240,240,240,0.6);}
+
+::-webkit-scrollbar-thumb {background-color: rgba(230,230,230,0.6);}
+::-webkit-scrollbar-thumb:hover {background-color: rgba(220,220,220,0.6);}
+
+body {
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    margin: 21px 25px;
+    padding: 15px;
+    padding-left: 0;
+    padding-right: 25px;
+    width: calc(600px - 65px);
+    background-color: white;
+}
+
+hr {
+    height: 5px;
+    width: 45%;
+    border: none;
+}
+    .border {
+        display: flex;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        padding-top: 25px;
+        width: calc(600px - 50px);
+        background-color: white;
+    }
+    .border:nth-of-type(2) {
+        top: auto;
+        bottom: 0;
+        padding-bottom: 25px;
+    }
+
+
+
+#container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:flex-start;
+    position: relative;
+    margin: auto;
+    padding: 25px;
+    width: 600px;
+    height: 100vh;
+    background-color: white;
+    overflow-y: auto;
+}
+
+    #content {
+        position: absolute;
+        margin: 160px 25px 75px 25px;
+    }
+
+        .work-hover {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            z-index: 1;
+            width: calc(50% - 10px);
+            height: 250px;
+        }
+
+        .work-hover a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 2px 5px;
+            color: black;
+            background-color: transparent;
+            border: solid 4px black;
+        }
+        .work-hover a:hover {
+            color: white;
+            background-color: black;
+        }
+
+        .work {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 25px;
+            width: 100%;
+            height: 250px;
+            line-height: 1.7em;
+        }
+
+        .work:nth-of-type(odd):hover .work-hover {
+            left:0;
+        }
+        .work:nth-of-type(even):hover .work-hover {
+            right: 0;
+        }
+
+        .work:nth-of-type(even) > img {
+            position: absolute;
+            right: 0;
+        }
+
+        .work:nth-of-type(even) > .caption {
+            position: absolute;
+            left: 0;
+        }
+
+            .work img {
+                position: relative;
+                float: left;
+                width: calc(50% - 10px);
+                height: 250px;
+                object-fit: cover;
+            }
+
+            @keyframes colorChange {
+            	0% { background-color: #d3eeff; }
+            	33% { background-color: #fff5a0; }
+            	66% { background-color: #ffd3d9; }
+            	100% { background-color: #d3eeff; }
+            }
+            @-webkit-keyframes colorChange {
+            	0% { background-color: #d3eeff; }
+            	33% { background-color: #fff5a0; }
+            	66% { background-color: #ffd3d9; }
+            	100% { background-color: #d3eeff; }
+            }
+            @-o-keyframes colorChange {
+            	0% { background-color: #d3eeff; }
+            	33% { background-color: #fff5a0; }
+            	66% { background-color: #ffd3d9; }
+            	100% { background-color: #d3eeff; }
+            }
+            @-moz-keyframes colorChange {
+            	0% { background-color: #d3eeff; }
+            	33% { background-color: #fff5a0; }
+            	66% { background-color: #ffd3d9; }
+            	100% { background-color: #d3eeff; }
+            }
+            .caption {
+                position: absolute;
+                right: 0;
+                padding: 10px 15px;
+                float: right;
+                width: calc(50% - 10px);
+                height: auto;
+                max-height: 250px;
+                background-color: #d3eeff;
+                animation: colorChange 4s infinite;
+            	-webkit-animation: colorChange 4s infinite;
+            	-o-animation: colorChange 4s infinite;
+            	-moz-animation: colorChange 4s infinite;
+
+                color: white;
+                font-weight: bolder;
+                text-transform: uppercase;
+                overflow: auto;
+            }
+
+
+
+            @keyframes colorChange {
+            	0% { background-color: #d3eeff; }
+            	33% { background-color: #fff5a0; }
+            	66% { background-color: #ffd3d9; }
+            	100% { background-color: #d3eeff; }
+            }
+            @-webkit-keyframes colorChange {
+            	0% { background-color: #d3eeff; }
+            	33% { background-color: #fff5a0; }
+            	66% { background-color: #ffd3d9; }
+            	100% { background-color: #d3eeff; }
+            }
+            @-o-keyframes colorChange {
+            	0% { background-color: #d3eeff; }
+            	33% { background-color: #fff5a0; }
+            	66% { background-color: #ffd3d9; }
+            	100% { background-color: #d3eeff; }
+            }
+            @-moz-keyframes colorChange {
+            	0% { background-color: #d3eeff; }
+            	33% { background-color: #fff5a0; }
+            	66% { background-color: #ffd3d9; }
+            	100% { background-color: #d3eeff; }
+            }
+
+            body, hr {
+                background-color: #d3eeff;
+                animation: colorChange 4s infinite;
+            	-webkit-animation: colorChange 4s infinite;
+            	-o-animation: colorChange 4s infinite;
+            	-moz-animation: colorChange 4s infinite;
+            }
+            * {font-family: Consolas;}
+
+            ::selection {
+                color: inherit;
+                background-color: #b3d4fc;
+                text-shadow: none;
+            }
+
+            a {text-decoration: underline;}
+            a:hover {cursor: pointer;}
+
+            @keyframes header {
+                0% {color: #d3eeff;}
+                33% {color: #fff5a0;}
+                66% {color: #ffd3d9;}
+                100% {color: #d3eeff;}
+            }
+            @-webkit-keyframes header {
+                0% {color: #d3eeff;}
+                33% {color: #fff5a0;}
+                66% {color: #ffd3d9;}
+                100% {color: #d3eeff;}
+            }
+            @-o-keyframes header {
+                0% {color: #d3eeff;}
+                33% {color: #fff5a0;}
+                66% {color: #ffd3d9;}
+                100% {color: #d3eeff;}
+            }
+            @-moz-keyframes header {
+                0% {color: #d3eeff;}
+                33% {color: #fff5a0;}
+                66% {color: #ffd3d9;}
+                100% {color: #d3eeff;}
+            }
+
+            marquee {
+                width: 50%;
+            }
+
+            #desc { /*height 32px*/
+                position: relative;
+                margin: 5px 0 0 5px;
+                width: 100%;
+                height: auto;
+                font-size: 14px;
+                color: rgba(0,0,0,0.15);
+                transition: all 500ms ease-in-out;
+                background-color: white;
+            }
+            #desc.arrow {height: 32px;}
+            #arrow {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                position: relative;
+                margin-top: 5px;
+                width: 100%;
+                border: solid 2px #f1f1f1;
+            }
+            #arrow:hover {
+                background-color: rgba(245,245,245,0.3);
+            }
+            #desc.arrow {overflow: hidden;}
+            #desc.arrow.show, header.show {height: auto; max-height: none;}
+            #desc.arrow.show > #descHtml {background-color: white;}
+
+            header {
+                max-height: 141.6px;
+                background-color: white;
+            }
+            header:hover #desc {color: rgba(0,0,0,0.6);}
+
+            #title, marquee {
+                position: relative;
+                margin: 0;
+                text-shadow: 4px 3px 0 white, 7px 5px 0 rgba(235,235,235,0.7); /* 6 5, 9 7 */
+                font-size: 36px;
+                letter-spacing: 2px;
+                animation: header 4s infinite;
+            }
+
+            @keyframes colorChange {
+            	0% {background-color: #d3eeff; border-color: #d3eeff;}
+            	33% {background-color: #fff5a0; border-color: #fff5a0;}
+            	66% {background-color: #ffd3d9; border-color: #ffd3d9;}
+            	100% {background-color: #d3eeff; border-color: #d3eeff;}
+            }
+            @-webkit-keyframes colorChange {
+                0% {background-color: #d3eeff; border-color: #d3eeff;}
+            	33% {background-color: #fff5a0; border-color: #fff5a0;}
+            	66% {background-color: #ffd3d9; border-color: #ffd3d9;}
+            	100% {background-color: #d3eeff; border-color: #d3eeff;}
+            }
+            @-o-keyframes colorChange {
+                0% {background-color: #d3eeff; border-color: #d3eeff;}
+                33% {background-color: #fff5a0; border-color: #fff5a0;}
+                66% {background-color: #ffd3d9; border-color: #ffd3d9;}
+                100% {background-color: #d3eeff; border-color: #d3eeff;}
+            }
+            @-moz-keyframes colorChange {
+                0% {background-color: #d3eeff; border-color: #d3eeff;}
+            	33% {background-color: #fff5a0; border-color: #fff5a0;}
+            	66% {background-color: #ffd3d9; border-color: #ffd3d9;}
+            	100% {background-color: #d3eeff; border-color: #d3eeff;}
+            }
+
+            @keyframes colorChangeHover {
+            	0% {color: #d3eeff; border-color: #d3eeff;}
+            	33% {color: #fff5a0; border-color: #fff5a0;}
+            	66% {color: #ffd3d9; border-color: #ffd3d9;}
+            	100% {color: #d3eeff; border-color: #d3eeff;}
+            }
+            @-webkit-keyframes colorChangeHover {
+            	0% {color: #d3eeff; border-color: #d3eeff;}
+            	33% {color: #fff5a0; border-color: #fff5a0;}
+            	66% {color: #ffd3d9; border-color: #ffd3d9;}
+            	100% {color: #d3eeff; border-color: #d3eeff;}
+            }
+            @-o-keyframes colorChangeHover {
+            	0% {color: #d3eeff; border-color: #d3eeff;}
+            	33% {color: #fff5a0; border-color: #fff5a0;}
+            	66% {color: #ffd3d9; border-color: #ffd3d9;}
+            	100% {color: #d3eeff; border-color: #d3eeff;}
+            }
+            @-moz-keyframes colorChangeHover {
+            	0% {color: #d3eeff; border-color: #d3eeff;}
+            	33% {color: #fff5a0; border-color: #fff5a0;}
+            	66% {color: #ffd3d9; border-color: #ffd3d9;}
+            	100% {color: #d3eeff; border-color: #d3eeff;}
+            }
+
+            nav {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-end;
+                position: relative;
+                width: 50%;
+                max-height: 28.4px;
+                overflow-y: auto;
+            }
+
+            nav a {
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: 2px 5px;
+                color: white;
+                background-color: #d3eeff;
+                border-style: solid;
+                border-width: 3px;
+                animation: colorChange 4s infinite;
+            	-webkit-animation: colorChange 4s infinite;
+            	-o-animation: colorChange 4s infinite;
+            	-moz-animation: colorChange 4s infinite;
+            }
+
+            nav a:hover {
+                background-color: transparent;
+                color: #d3eeff;
+                border-style: solid;
+                border-width: 3px;
+                animation: colorChangeHover 4s infinite;
+            	-webkit-animation: colorChangeHover 4s infinite;
+            	-o-animation: colorChangeHover 4s infinite;
+            	-moz-animation: colorChangeHover 4s infinite;
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 30px;
+            }
+
+
+</style>
+
+</head>
+
+<body onload="title()">
+
+    <section id="container">
+        <div class="border">
+            <hr>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <hr>
+        </div>
+
+        <header style="background-color: white;">
+            <h1 id="title">adore u&deg;</h1>
+            <nav>
+                <a href="">one</a>
+                <a href="">two</a>
+                <a href="">three</a>
+                <a href="">four</a>
+                <a href="">five</a>
+                <a href="">four</a>
+                <a href="">five</a>
+                <a href="">six</a>
+                <a href="">seven</a>
+
+                <!--CODE TO ADD MORE **COPY AND PASTE BEFORE THE </nav> TAG**
+                    <a href="URL">HTML</a>
+                -->
+            </nav>
+                <div id="desc">
+                    <div id="descHtml">Visual diary. Lorem ipsum <strong>this is bolded</strong> sit amet, consectetur adipisicing elit, sed do <a class="link">this is a link</a> incididunt ut labore et dolorelo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>this is emphasized this is emphasized this is emphasized</em> ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                </div>
+                <div id="arrow"><img id="arrowImg" src="down.png" /></div>
+        </header>
+
+        <article id="content">
+            <div class="work">
+                <div class="work-hover"><a href="">see more</a></div>
+                <img class="img" width="740" height="740" src="img3.jpeg" />
+
+                <div class="caption">
+                    Lorem ipsum.
+                </div>
+            </div>
+
+            <div class="work">
+                <div class="work-hover"><a href="">see more</a></div>
+                <img width="740" height="740" src="img4.jpeg" />
+
+                <div class="caption">
+                    Lorem ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+            </div>
+
+            <div class="work">
+                <div class="work-hover"><a href="">see more</a></div>
+                <img width="740" height="740" src="img7.jpeg" />
+
+                <div class="caption">
+                    Lorem ipsum.
+                </div>
+            </div>
+
+            <div class="work">
+                <div class="work-hover"><a href="">see more</a></div>
+                <img width="740" height="740" src="img11.jpg" />
+
+                <div class="caption">
+                    Lorem ipsum.
+                </div>
+            </div>
+
+            <div class="work">
+                <div class="work-hover"><a href="">see more</a></div>
+                <img width="740" height="740" src="img12.jpg" />
+
+                <div class="caption">
+                    Lorem ipsum.
+                </div>
+            </div>
+
+            <!--CODE TO ADD MORE **COPY AND PASTE BEFORE THE </article> TAG**
+                <div class="work">
+                    <div class="work-hover"><a href="URL HERE">HTML HERE</a></div>
+                    <img width="WIDTH PX HERE" height="HEIGHT PX HERE" src="URL HERE" />
+
+                    <div class="caption">
+                        HTML HERE
+                    </div>
+                </div>
+            -->
+
+        </article>
+
+        <div class="border">
+            <hr>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <hr>
+        </div>
+    </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+var $desc = $("#desc").height();
+
+if ($desc > 32) {
+    $("#arrow").show();
+    $("#desc").addClass("arrow");
+
+    $("#arrow").click(function() {
+        $("#desc").toggleClass("show");
+        $("header").toggleClass("show");
+
+        if ($("#arrowImg").attr("src") == "down.png") {
+            $("#arrowImg").attr("src", "up.png");
+        } else if ($("#arrowImg").attr("src") == "up.png") {
+            $("#arrowImg").attr("src", "down.png");
+        } else;
+    });
+
+} else {$("#arrow").hide();}
+
+$(".work-hover").hide();
+
+$(".work").mouseenter(function() {
+    var bgArray = ["rgba(211,238,255,.6)","rgba(255,245,160,.6)","rgba(255,211,217,.6)"];
+    var bgRand = bgArray[Math.floor(Math.random() * bgArray.length)];
+    console.log(bgRand);
+
+    $(this).children(".work-hover").css("background-color", bgRand).fadeIn();
+});
+$(".work").mouseleave(function() {
+    $(".work-hover").hide();
+});
+
+function title() {
+	var h1 = $("#title").text().length;
+    console.log(h1);
+
+    var width = $("#title").width() - 32;
+    console.log(width);
+    if (h1 > 11) {
+        $("h1").replaceWith( "<marquee>" + $("#title").text() + "</marquee>" );
+        $("marquee").css("width", width);
+    } else;
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+#workOne,
+#workTwo,
+#workThree {
+  top: 0;
+  left: 0;
+
+  display: none; // display: flex
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}

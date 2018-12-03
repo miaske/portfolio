@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Montserrat">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery-3.2.1.js"></script>
+<style>
+
+* {box-sizing: border-box;}
+
+*:focus {outline: 0;}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+a:hover {border-bottom: solid 2px black;}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    color: black;
+    background-image: url('loginbg.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    overflow: hidden;
+    transition: background-image 500ms ease-in-out;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h6 {
+    font-weight: 900;
+    font-size: 20px;
+    text-transform: lowercase;
+    margin: 0;
+}
+
+img.icon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+img.icon:hover {
+    cursor: pointer;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    z-index: 10;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+nav a:hover {
+    text-decoration: line-through;
+    text-decoration-color: white;
+    border: none;
+}
+
+#lineLongThingy { /*hehe*/
+    position: relative;
+    margin: auto;
+    margin-top: 200px;
+    width: 1000px;
+    height: 310px;
+    border-radius: 25px;
+    background: #F85563;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    -webkit-transition: all 500ms ease-in-out;
+}
+
+#box {
+    position: absolute;
+    z-index: 9;
+    top: -90px;
+    margin: 0 50px;
+    padding: 25px;
+    height: 500px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    width: 500px;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    text-align: left;
+    clear: both;
+    line-height: 2em;
+}
+
+#box.signup {
+    -webkit-transform: translateX(400px);
+}
+
+input {
+    border: none;
+    border-bottom: solid 2px #FFE000;
+    transition: all 250ms ease-in;
+}
+
+input:focus {
+    border-color: black;
+}
+
+#lineLongThingy.signup {
+    background-color: #5563f8;
+}
+
+aside {
+    float: right;
+    width: 400px;
+    height: 100%;
+    margin-right: 50px;
+    padding: 10px;
+    text-align: center;
+    font-size: 28px;
+}
+
+aside.signup {
+    float: left;
+    width: 400px;
+    margin-left: 50px;
+}
+
+button {
+    position: relative;
+    z-index: 2;
+    border: solid 3px black;
+    background-color: white;
+    width: 175px;
+    font-size: 18px;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Open Sans';
+    letter-spacing: 1px;
+}
+
+button:hover {cursor: pointer;}
+
+button:focus {outline:0;}
+
+button#eye {
+    position: absolute;
+    padding: 0;
+    width: auto;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+img {
+    clear: both;
+    padding: 0;
+}
+
+
+.button {
+    background-color: #FFE000;
+    border-color: black;
+}
+
+.button.anim {
+    transform: translate(4px, 4px);
+}
+
+.shadow {
+    position: absolute;
+    z-index: 1;
+    width: 175px;
+    height: 51px;
+    background-color: transparent;
+    border: solid 3px black;
+    transform: translate(-168px, 8px);
+}
+
+.shadow.anim {
+    border-color: black;
+    background: black;
+}
+
+footer {
+    position: absolute;
+    bottom: 15px;
+}
+
+.sha {
+    position: absolute;
+    z-index: 1;
+    width: 175px;
+    height: 51px;
+    background-color: transparent;
+    border: solid 3px black;
+    transform: translate(-168px, 8px);
+}
+
+.dow {
+    position: absolute;
+    z-index: 1;
+    width: 175px;
+    height: 51px;
+    background-color: transparent;
+    border: solid 3px black;
+    transform: translate(-168px, 8px);
+}
+
+.but.anim {
+    transform: translate(4px, 4px);
+    border-color: white;
+}
+.ton.anim {
+    transform: translate(4px, 4px);
+    border-color: white;
+}
+
+.sha.anim {
+    border-color: white;
+    background: white;
+}
+
+.dow.anim {
+    border-color: white;
+    background: white;
+}
+</style>
+
+</head>
+
+<body id="container">
+
+<nav>
+    <a href="">home</a>
+    <a href="">about</a>
+    <a href="">link</a>
+    <a href="">link</a>
+</nav>
+
+<div id="lineLongThingy">
+    <aside class="signup">
+        <br>
+        Already have an account?
+        <br>
+        <br>
+        <div id="login">
+            <button class="but">LOGIN</button>
+            <button class="sha"></button>
+        </div>
+    </aside>
+
+    <aside>
+        <br>
+        Don't have an account?
+        <br>
+        <br>
+        <div id="signup">
+            <button class="ton">SIGNUP</button>
+            <button class="dow"></button>
+        </div>
+        <br>
+        and <a href="">learn more</a>
+    </aside>
+
+    <article id="box">
+        <h1 style='margin: 10px 0 10px 10px'>Hello Again!</h1>
+        <form action='' method='POST' style='margin: 30px 0 10px 13px'>
+            <input type='text' placeholder='Enter Username' size='24' required/>
+            <br>
+            <br>
+            <input id='password' placeholder='Enter Password' type='password' size='24' style='margin-bottom: 30px' required/>
+
+            <button type='button' id='eye' style='margin: 5px 0 0 10px;'>
+                <img id='icon' src='icons8-invisible.png' alt='eye' width='20' height='20'/>
+            </button>
+            <br>
+            <button class='button'>LOGIN</button>
+            <button class='shadow'></button>
+        </form>
+
+        <footer>
+            <a href=''>Forgot password</a><span style='font-weight: 900'>?</span>
+        </footer>
+    </article>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    function show() {
+        var pwd = document.getElementById('password');
+        pwd.setAttribute('type', 'text');
+        var icon = document.getElementById('icon');
+        icon.setAttribute('src', 'icons8-eye.png');
+    }
+
+    function hide() {
+        var pwd = document.getElementById('password');
+        pwd.setAttribute('type', 'password');
+        var icon = document.getElementById('icon');
+        icon.setAttribute('src', 'icons8-invisible (2).png');
+    }
+
+    var pwShown = 0;
+
+    document.getElementById("eye").addEventListener("click", function () {
+        if (pwShown == 0) {
+            pwShown = 1;
+            show();
+        } else {
+            pwShown = 0;
+            hide();
+        }
+    }, false);
+
+
+    function signup() {
+        setTimeout(function(){
+            $(".ton").toggleClass("anim");
+            $('.dow').toggleClass('anim');
+        }, 300);
+    }
+
+    function login() {
+        setTimeout(function(){
+            $(".sha").toggleClass("anim");
+            $('.but').toggleClass('anim');
+        }, 300);
+    }
+
+    function huh() {
+        setTimeout(function() {
+            $(".shadow").toggleClass('anim');
+            $('.button').toggleClass('anim');
+        }, 300);
+    }
+
+    $('#signup').click(function() {
+        $('#box').toggleClass('signup');
+        $('#lineLongThingy').toggleClass('signup');
+        $(".ton").toggleClass('anim');
+        $(".dow").toggleClass('anim');
+        $("body").css({backgroundImage: "url('signupbg.png')"});
+        $('#box').html($("#box").text() == "<h1 style='margin: 10px 0 10px 10px'>Welcome!</h1><form action='' method='POST' style='margin: 30px 0 10px 13px'><input type='text' placeholder='Enter Username' size='24' required/><br><br><input id='password' placeholder='Enter Password' type='password' size='24' required/><br><br><input type='password' id='confirm' placeholder='Re-Enter Password' size='24' required/><br><br><input type='text' placeholder='Enter Valid Email Address' id='email' size='24' required/><br><br><button class='button'>SIGNUP</button><button class='shadow'></button>" ? "<h1 style='margin: 10px 0 10px 10px'>Hello Again!</h1><form action='' method='POST' style='margin: 30px 0 10px 13px'><input type='text' placeholder='Enter Username' size='24' required/><br><br><input id='password' placeholder='Enter Password' type='password' size='24' style='margin-bottom: 30px' required/><button type='button' id='eye' style='margin: 5px 0 0 10px;'><img id='icon' src='icons8-invisible.png' alt='eye' width='20' height='20'/></button><br><button class='button'>LOGIN</button><button class='shadow'></button></form><footer><a href=''>Forgot password</a><span style='font-weight: 900'>?</span></footer>" : "<h1 style='margin: 10px 0 10px 10px'>Welcome!</h1><form action='' method='POST' style='margin: 30px 0 10px 13px'><input type='text' placeholder='Enter Username' size='24' required/><br><br><input id='password' placeholder='Enter Password' type='password' size='24' required/><br><br><input type='password' id='confirm' placeholder='Re-Enter Password' size='24' required/><br><br><input type='text' placeholder='Enter Valid Email Address' id='email' size='24' required/><br><br><button class='button'>SIGNUP</button><button class='shadow'></button>");
+        signup();
+    });
+
+    $('#login').click(function() {
+        $('#box').toggleClass('signup');
+        $('#lineLongThingy').toggleClass('signup');
+        $(".but").toggleClass('anim');
+        $(".sha").toggleClass('anim');
+        $("body").css({backgroundImage: "url('loginbg.png')"});
+        $('#box').html($('#box').text() == "<h1 style='margin: 10px 0 10px 10px'>Hello Again!</h1><form action='' method='POST' style='margin: 30px 0 10px 13px'><input type='text' placeholder='Enter Username' size='24' required/><br><br><input id='password' placeholder='Enter Password' type='password' size='24' style='margin-bottom: 30px' required/><button type='button' id='eye' style='margin: 5px 0 0 10px;'><img id='icon' src='icons8-invisible.png' alt='eye' width='20' height='20'/></button><br><button class='button'>LOGIN</button><button class='shadow'></button></form><footer><a href=''>Forgot password</a><span style='font-weight: 900'>?</span></footer>" ? "<h1 style='margin: 10px 0 10px 10px'>Welcome!</h1><form action='' method='POST' style='margin: 30px 0 10px 13px'><input type='text' placeholder='Enter Username' size='24' required/><br><br><input id='password' placeholder='Enter Password' type='password' size='24' required/><br><br><input type='password' id='confirm' placeholder='Re-Enter Password' size='24' required/><br><br><input type='text' placeholder='Enter Valid Email Address' id='email' size='24' required/><br><br><button class='button'>SIGNUP</button><button class='shadow'></button>" : "<h1 style='margin: 10px 0 10px 10px'>Hello Again!</h1><form action='' method='POST' style='margin: 30px 0 10px 13px'><input type='text' placeholder='Enter Username' size='24' required/><br><br><input id='password' placeholder='Enter Password' type='password' size='24' style='margin-bottom: 30px' required/><button type='button' id='eye' style='margin: 5px 0 0 10px;'><img id='icon' src='icons8-invisible.png' alt='eye' width='20' height='20'/></button><br><button class='button'>LOGIN</button><button class='shadow'></button></form><footer><a href=''>Forgot password</a><span style='font-weight: 900'>?</span></footer>");
+        login();
+    });
+
+    $('.button').click(function() {
+        $('.button').toggleClass('anim');
+        $('.shadow').toggleClass('anim');
+        huh();
+    })
+
+</script>
+</body>
+</html>

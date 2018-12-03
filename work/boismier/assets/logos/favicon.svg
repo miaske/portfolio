@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="87.643463"
+   height="87.643463"
+   viewBox="0 0 23.188999 23.188999"
+   version="1.1"
+   id="svg22974"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="C:\Users\miask\Documents\boismier\favicon.png"
+   inkscape:export-xdpi="71.32"
+   inkscape:export-ydpi="71.32">
+  <defs
+     id="defs22968">
+    <clipPath
+       id="clipPath16056"
+       clipPathUnits="userSpaceOnUse">
+      <g
+         style="fill:#db4841;fill-opacity:1"
+         transform="matrix(0.53144091,0,0,-0.531441,232.78714,1126.1992)"
+         id="g16060">
+        <path
+           sodipodi:nodetypes="scccccs"
+           id="path16058"
+           d="m 496.7,739.7 c -10.8,0 -20.6,-3.7 -25.7,-9.8 -1.2,-1.4 -1,-3.4 0.4,-4.6 21.50939,0.15142 34.90322,0.17314 49.4,-0.1 1.5,1.1 1.8,3.1 0.7,4.6 -4.3,6 -12.7,9.6 -23.1,10 -0.6,-0.1 -1.2,-0.1 -1.7,-0.1 z"
+           inkscape:connector-curvature="0"
+           style="fill:#db4841;fill-opacity:1" />
+      </g>
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="53.300496"
+     inkscape:cy="60.992441"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1004"
+     inkscape:window-x="-7"
+     inkscape:window-y="-7"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata22971">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-110.67974,-74.862244)">
+    <image
+       sodipodi:absref="C:\Users\miask\Documents\boismier\b.png"
+       xlink:href="b.png"
+       width="21.779339"
+       height="15.739108"
+       preserveAspectRatio="none"
+       id="image24358"
+       x="111.38457"
+       y="78.587189" />
+  </g>
+</svg>

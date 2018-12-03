@@ -1,0 +1,63 @@
+.layer.list:hover {cursor: pointer;}
+
+#workList {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: -100vh;
+  z-index: 1000;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $light-accent-color;
+  overflow: hidden;
+
+  .go-back {
+    @extend .arrow;
+    position: absolute !important;
+    left: 35px !important;
+    &:hover {
+      margin-left: 0 !important;
+      margin-top: -5px !important;
+      transition-property: margin-top;
+    }
+  }
+
+  @include prefix(transition, (top 500ms ease));
+
+  .work-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-self: center;
+    align-content: flex-start;
+
+    position: absolute;
+
+    width: calc(100vw - 20%);
+    height: calc(100vh - 13%);
+    background-color: transparent;
+
+    overflow-y: auto;
+    padding-left: 15px;
+
+    .cat {
+      margin: 5px 5%;
+      h3 {
+      color: lighten($light-accent-color, 10%);
+      font-family: "Lato", sans-serif;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+      ul > li > a {
+        @extend .body-link;
+        margin: 15px 0 !important;
+      }
+    }
+  }
+}
