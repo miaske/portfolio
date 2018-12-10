@@ -1,11 +1,11 @@
 // hire me slide functionality
-$(".hire-me").click(function () {
-  $("#hireMe").css({
+$("#hireMeLink").click(function () {
+  $("#hireMeContainer").css({
     "top":"0"
   });
 });
-$("#hireMe .go-back").click(function () {
-  $("#hireMe").css({
+$("#hireMeContainer #hireMeGoBack").click(function () {
+  $("#hireMeContainer").css({
     "top":"100vh"
   });
 });

@@ -1,0 +1,110 @@
+.parallax-layer {
+  &:not(.title) {@include prefix(box-shadow,(0 32px 40px -20px rgba(0,0,0,.25)));}
+  margin: auto;
+
+/*  @media #{$mobile} {
+    #workBox {
+      @keyframes translate {
+        0%, 100% {transform: translate(0);}
+        20% {transform: translate(5px, -20px);}
+        40% {transform: translate(-10px, -10px);}
+        60% {transform: translate(-10px, -10px);}
+        80% {transform: translate(-5px, 20px);}
+      }
+      @include prefix(animation, (translate 10s infinite cubic-bezier(2,1,1,.67)));
+    }
+
+    #skillsBox {
+      @keyframes translate {
+        0%, 100% {transform: translate(0);}
+        20% {transform: translate(20px, 5px);}
+        40% {transform: translate(10px, -5px);}
+        60% {transform: translate(-20px, 10px);}
+        80% {transform: translate(10px, 5px);}
+      }
+      @include prefix(animation, (translate 10s infinite cubic-bezier(.83,.67,.67,.17)));
+    }
+  } */
+
+  &.accent-pink {
+    background-color: $main-pink;
+    color: $main-pink-light;
+    width: 300px;
+    height: 400px;
+
+    text-align: right;
+    @media (min-width: 470px) and (max-width: 769px) {
+      width: calc(300px * .7);
+      height: calc(400px * .7);
+    }
+    @media (max-width: 470px) {
+      width: calc(250px * .5);
+      height: calc(400px * .5);
+    }
+  }
+
+  &.accent-blue {
+    background-color: $main-blue;
+    color: $main-blue-light;
+
+    width: 300px;
+    height: 200px;
+    @media (min-width: 470px) and (max-width: 769px) {
+      width: calc(300px * .7);
+      height: calc(200px * .7);
+    }
+    @media (max-width: 470px) {
+      width: calc(300px * .5);
+      height: calc(200px * .5);
+    }
+
+    h2 {
+      position: absolute;
+      bottom: 5px;
+    }
+  }
+
+  &.accent-mono {
+    background-color: $main-white;
+    color: $main-white-dark;
+    width: 300px;
+    height: 350px;
+
+    @media (min-width: 470px) and (max-width: 769px) {
+      width: calc(300px * .7);
+      height: calc(350px * .7);
+    }
+    @media (max-width: 470px) {
+      width: calc(300px * .5);
+      height: calc(350px * .5);
+    }
+  }
+
+  &.logo {
+    width: 200px;
+    height: 200px;
+    background-color: $main-gray;
+
+    @media (max-width: 769px) {
+      width: calc(200px * .6);
+      height: calc(200px * .6);
+    }
+
+    @media (min-width: 470px) and (max-width: 769px) {
+      width: calc(200px * .6);
+      height: calc(200px * .6);
+    }
+    @media (max-width: 470px) {
+      width: calc(200px * .55);
+      height: calc(200px * .55);
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path,
+      rect {@include prefix(transition, (fill 500ms cubic-bezier(.67,.67,.17,.83)));}
+    }
+  }
+}

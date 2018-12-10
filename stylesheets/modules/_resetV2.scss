@@ -1,0 +1,35 @@
+* {
+  @include prefix(box-sizing,border-box);
+  &::selection {
+    color:$main-black;
+    background-color:rgba(100,149,237,.75);
+  }
+}
+
+html,
+body {
+  position:relative;
+  overflow:hidden;
+  margin:0;
+  padding:0;
+}
+
+a {text-decoration:none;}
+
+/*section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  width: 100%;
+
+  padding: .5em 1em;
+}*/
+
+.body-link {
+  color:$body-font-color;
+  border-bottom:$body-font-color solid 1px;
+}
+
+// add class to elements that should have pointer cursor
+.cursor-pointer {cursor: pointer !important;}

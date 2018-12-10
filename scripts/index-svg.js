@@ -1,4 +1,4 @@
-$(".header-title > svg").click(function () {
+$("#headerTitle > svg").click(function () {
   loadProject();
   setTimeout(function(){ window.location.replace("http://www.miaske.com"); }, 500);
 });
@@ -24,7 +24,7 @@ function loadProject() {
   });
 }
 
-$(".header-title > svg").mouseenter(function () {
+$("#headerTitle > svg").mouseenter(function () {
   $("#svg2683 path").css({
     "fill":"#E3E5EC"
   });

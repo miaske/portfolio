@@ -2,13 +2,12 @@
 <html lang="en-US" id="project">
 
 <head>
-  <link rel="stylesheet" href="/../stylesheets/style.css">
+  <link rel="stylesheet" href="../../stylesheets/style.css">
 
-  <link rel="icon" href="/../favicon_ICO.png" type="image/png">
-  <link rel="shortcut icon" href="/../favicon_ICO.ico" type="image/x-icon">
-  <link rel="icon" href="/../favicon_ICO.ico" type="image/x-icon">
-  <link rel="icon" href="/../favicon_GIF.gif" type="image/gif">
-  <link rel="icon" href="/../favicon_PNG.png" type="image/png">
+  <link rel="shortcut icon" href="../../assets/icons/favicon_ICO.ico" type="image/x-icon">
+  <link rel="icon" href="../../assets/icons/favicon_ICO.ico" type="image/x-icon">
+  <link rel="icon" href="../../assets/icons/favicon_GIF.gif" type="image/gif">
+  <link rel="icon" href="../../assets/icons/favicon_PNG.png" type="image/png">
 
   <title>MIASKE &#8212; Web Developer + Designer Portfolio</title>
 
@@ -169,7 +168,7 @@
       <div id="workOne">
         <div id="parallaxImg" class="layer img" data-depth="0.20">
           <div class="parallax-img-wrapper">
-            <img class="parallax-img-wrapper" src="adoreu.png" alt="index screenshot"/>
+            <img class="parallax-img-wrapper" src="assets/screenshots/adoreu.png" alt="index screenshot"/>
           </div>
         </div>
 
@@ -220,11 +219,17 @@
       </div>
 
       <div class="images">
-        <img class="preview-img" src="color1.png" alt="palette example" />
-        <img class="preview-img" src="color2.png" alt="palette example" />
-        <img class="preview-img" src="color3.png" alt="palette example" />
-        <img class="preview-img" src="color4.png" alt="palette example" />
-        <img class="preview-img" src="typo1.png" alt="typography example" />
+        <div class="images-row">
+          <img class="preview-img" src="style-guide/color1.png" alt="palette example" />
+          <img class="preview-img" src="style-guide/color2.png" alt="palette example" />
+        </div>
+        <div class="images-row">
+          <img class="preview-img" src="style-guide/color3.png" alt="palette example" />
+          <img class="preview-img" src="style-guide/color4.png" alt="palette example" />
+        </div>
+        <div class="images-row">
+          <img class="preview-img" src="style-guide/typo1.png" alt="typography example" />
+        </div>
       </div>
 
       <div class="desc">
@@ -360,11 +365,11 @@
   </div>-->
 </div>
 
-<script src="/../scripts/jquery-3.2.1.min.js"></script>
-<script src="/../scripts/hire-me.js"></script>
+<script src="../../scripts/jquery-3.2.1.min.js"></script>
+<script src="../../scripts/hire-me.js"></script>
 
 <!-- vendor parallax script -->
-<script src="/../scripts/parallax.min.js"></script>
+<script src="../../scripts/parallax.min.js"></script>
 <script>
 var scene = document.getElementById("js-scene");
 var parallax = new Parallax(scene);

@@ -24,7 +24,7 @@
       display: block;
     }
 
-    .layer {
+    .layer { //parallax-layer
       @include prefix(box-shadow, (0 32px 40px -20px rgba(0,0,0,.25)));
       margin: auto;
 
@@ -194,6 +194,7 @@
     svg {
       width: 100%;
       height: 100%;
+      
       path,
       rect {@include prefix(transition, (fill 500ms cubic-bezier(.67,.67,.17,.83)));}
     }
@@ -462,8 +463,8 @@
           display: block;
           font-style: normal;
           font-size: 1.1em;
-          font-family: $head-font-family;
-          font-weight: $head-font-weight;
+        //  font-family: $head-font-family;
+        //  font-weight: $head-font-weight;
           letter-spacing: 3px;
           text-transform: lowercase;
           font-variant: small-caps;
@@ -502,8 +503,8 @@
 
       .per {
         font-size: 3em;
-        font-family: $head-font-family;
-        font-weight: $head-font-weight;
+      //  font-family: $head-font-family;
+    //    font-weight: $head-font-weight;
         letter-spacing: 3px;
         text-transform: lowercase;
         font-variant: small-caps;

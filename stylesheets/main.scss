@@ -8,7 +8,7 @@ $main-pink: #DBBEB9; // pink
 $dark-accent-color: $main-blue;
 $light-accent-color: $main-pink;
 
-$bg-color: white;
+//$bg-color: white;
 
 $body-text-color: $main-black;
 $body-font-family: "Nexa", sans-serif;
@@ -32,17 +32,9 @@ $head-font-weight: 100;
   }
 }
 
-html,
-body,
-#body {
-  position: relative;
-  overflow: hidden;
-  #project {overflow-y:auto;}
-}
-
 body {
   color: $body-text-color;
-  background-color: $bg-color;
+//  background-color: $bg-color;
   font-family: $body-font-family;
   font-weight: $body-font-weight;
 }
@@ -102,4 +94,4 @@ h4 {
 .layer,
 .skill {visibility: hidden;}
 
-@import "modules/all","partials/base";
+@import "modules/allV2","partials/baseV2","vendors/parallaxV2";

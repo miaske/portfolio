@@ -1,0 +1,38 @@
+#mainBodyContainer {
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  #mainBodyWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100vw - 10%); //20%
+    height: calc(100vh - 13%);
+
+    background-color: $body-wrapper-background-color;
+  }
+}
+
+#hireMeContainer {
+  position: absolute;
+  top: 100vh;
+  z-index: 1000;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: row nowrap;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $hire-me-background-color;
+  color:$hire-me-font-color;
+}

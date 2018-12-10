@@ -1,0 +1,46 @@
+// mixins
+  // vendor prefixes
+  $webkit:"-webkit-";
+  $moz:"-moz-";
+  $opera:"-o-";
+  $ms:"-ms-";
+  // mixin for a declaration with vendor prefixes
+  @mixin prefix($property, $value) {
+    @each $prefix in ("", $webkit, $moz, $opera, $ms) {
+      #{$prefix}#{$property}: #{$value};
+    }
+  }
+
+
+// palette
+$main-black:#13070C;
+
+$main-gray:#E3E5EC;
+
+$main-white:#F2F4F9;
+$main-white-dark: darken($main-white, 10%);
+
+$main-blue:#2E385C;
+$main-blue-light:lighten($main-blue,15%);
+
+$main-pink:#DBBEB9;
+$main-pink-light:lighten($main-pink,10%);
+
+// palette assign
+$body-wrapper-background-color: $main-gray;
+$body-font-color: $main-black;
+
+// #hireMeContainer
+$hire-me-background-color: $main-blue;
+$hire-me-font-color: $main-white;
+
+$light-accent-color: $main-pink; // TEMP
+$dark-accent-color:$main-blue; // TEMP
+
+// media
+$mobile: "(max-width: 529px)";
+$tablet: "(min-width: 530px) and (max-width: 767px)";
+$laptop: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+
+@import "modules/allV2","partials/baseV2","vendors/vendors";

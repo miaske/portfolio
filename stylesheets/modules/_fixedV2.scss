@@ -1,0 +1,63 @@
+.fixed-element {
+  position: fixed;
+  z-index: 999;
+
+  font-family: "Nexa";
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  &#headerTitle {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+
+    width: 100%;
+    height:6.5vh;
+
+    #headerTitleLandscapeLogo { // svg
+      position: absolute;
+      bottom: 0;
+
+      width: auto;
+      height: 5vh;
+
+      cursor: pointer;
+
+      &:hover path {
+        fill: $main-white !important;
+        stroke: $main-white !important;
+      }
+    }
+  }
+
+  &.fixed-element-name {
+    top: 50%;
+
+    color:$body-font-color;
+
+    &#firstName {
+      @include prefix(transform,rotate(-90deg));
+      left: -8px;
+    }
+    &#lastName {
+      @include prefix(transform,rotate(90deg));
+      right: -18px;
+    }
+  }
+
+  &#hireMeLink {
+    bottom:0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 6.5vh;
+  }
+}

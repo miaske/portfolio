@@ -189,7 +189,7 @@
       }
     }
     .link {
-      @extend .body-link;
+    //  @extend .body-link;
       display: block !important;
       color: $main-white !important;
       border-color: $main-white !important;
