@@ -18,6 +18,31 @@
     height: calc(100vh - 13%);
 
     background-color: $body-wrapper-background-color;
+
+    // parallax home page
+
+    .parallax-container {
+      overflow: hidden;
+
+      width: 100%;
+      height: 100vh;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+
+      .wrapper#js-scene {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        width: calc(100vw - 20%);
+        height: calc(100vh - 13%);
+        background-color: $main-gray;
+      }
+    }
   }
 }
 
